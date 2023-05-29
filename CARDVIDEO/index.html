@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="container-video">
+            <audio id="player-audio">
+                <source src="">
+            </audio>
+            <video autoplay muted loop>
+                <source src="video-bg/final-gohan.mp4">
+            </video>
+            <header>
+                <label for="id-show-menu" class="show-menu">
+                    <div class="nav-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </label>
+                <input type="checkbox" id="id-show-menu" class="checkbox-menu" role="button">
+                <div class="menu-block">
+                    <ul class="navUL">
+                        <li><a href="#">Explore</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">E-mail</a></li>
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="area-user">
+                <div class="circle-perfil" id="image-user"></div>
+                <span class="name-user">
+                    @_tohru
+                    <i class="fa-solid fa-check"></i>
+                </span>
+            </div>
+            <div class="info-music">
+                <div class="col-1 fade-in">
+                    <div class="name-music" id="song-name">
+                        Name Music
+                    </div>
+                    <div class="name-artist" id="name-artist">
+                        Artist Name
+                    </div>
+                </div>
+                <div class="col-2">
+                    <i class="fa-solid fa-minus"></i>
+                </div>
+            </div>
+            <div class="sub-container">
+                <div class="controls">
+                    <input type="range" min="0" max="100" value="0" class="slider" id="seek-slider">
+                    <div class="timer-container">
+                        <span class="current-time">00:00</span>
+                        <span class="duration">00:00</span>
+                    </div>
+                </div>
+                <div class="icons-control">
+                    <i class="fa-solid fa-repeat">
+                        <span>no-repeat</span>
+                    </i>
+                    <i class="fa-solid fa-backward"></i>
+                    <i class="fa-solid fa-play" id="play-pause"></i>
+                    <i class="fa-solid fa-forward"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="sound-effect.js"></script>
+    <script src="repeat-icon.js"></script>
+    <script src="play-icon.js"></script>
+    <script src="play-music.js"></script>
+</body>
+</html>

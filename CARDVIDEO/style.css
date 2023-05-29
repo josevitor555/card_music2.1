@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+main .container-video {
+    position: relative;
+    width: 340px;
+    height: 480px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+main .container-video:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .3));
+    pointer-events: none;
+}
+main .container-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+main .container-video header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+}
+main .container-video header .show-menu {
+    cursor: pointer;
+    color: #fafafa;
+}
+main .container-video input.checkbox-menu[type="checkbox"] {
+    display: none;
+    -webkit-appearance: none;
+}
+main .container-video input.checkbox-menu[type="checkbox"]:checked ~ div.menu-block {
+    opacity: 1;
+    visibility: visible;
+}
+main .container-video .nav-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: .5rem;
+    vertical-align: middle;
+}
+main .container-video .menu-block {
+    display: inline-block;
+    opacity: 0;
+    vertical-align: middle;
+    visibility: hidden;
+    transition: all .25s;
+}
+main .container-video ul.navUL {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+main .container-video ul.navUL li {
+    display: inline-block;
+    padding: 0px 5px;
+}
+main .container-video ul.navUL li a {
+    position: relative;
+    color: #fafafa;
+    display: block;
+    padding: 3px;
+    text-decoration: none;
+    opacity: .5;
+    transition: .3s;
+    font-weight: 600;
+}
+main .container-video ul.navUL li a:hover {
+    opacity: 1;
+}
+main .container-video ul.navUL li a::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 4px;
+    background: #ffffff;
+    left: 0;
+    bottom: -3px;
+    border-radius: 2px;
+}
+main .container-video ul.navUL li a:hover::after {
+    width: 100%;
+}
+main .container-video .area-user {
+    position: absolute;
+    left: 0;
+    top: 55px;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+}
+main .container-video .area-user .circle-perfil#image-user {
+    width: 80px;
+    height: 80px;
+    background-image: url("user-image/tohru.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+main .container-video .area-user .name-user {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fafafa;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+main .container-video .area-user .name-user .fa-solid {
+    font-size: 14px;
+    color: #2ae161;
+}
+main .container-video .info-music {
+    position: absolute;
+    left: 0;
+    top: 195px;
+    width: 100%;
+    height: 100px;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .container-video .info-music .col-1 {
+    width: 240px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .container-video .info-music .col-1 .name-music {
+    color: #d9e0e1;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+main .container-video .info-music .col-1 .name-artist {
+    color: #fefefe;
+    font-size: 18px;
+}
+main .container-video .info-music .col-2 {
+    width: 90px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .container-video .info-music .col-2 .fa-solid {
+    font-size: 20px;
+    color: #FFFFFF;
+    opacity: .5;
+    cursor: pointer;
+}
+main .container-video .sub-container {
+    position: absolute;
+    left: 0;
+    top: 290px;
+    width: 100%;
+    height: 190px;
+}
+main .container-video .sub-container .controls {
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+}
+main .container-video .sub-container .controls .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #fafafa;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+main .container-video .sub-container .controls .slider:hover {
+    opacity: 1;
+}
+main .container-video .sub-container .controls .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fafafa;
+    cursor: pointer;
+}
+main .container-video .sub-container .controls::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+main .container-video .sub-container .controls .timer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+main .container-video .sub-container .controls .timer-container .current-time, .duration {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fafafa;
+}
+main .container-video .sub-container .icons-control {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+main .container-video .sub-container .icons-control .fa-solid.fa-repeat {
+    color: #2e2e34;
+    font-size: 20px;
+    width: 70px;
+    height: 50px;
+    background: #fafafa;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+main .container-video .sub-container .icons-control .fa-solid.fa-repeat span {
+    font-size: 12px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+main .container-video .sub-container .icons-control .fa-solid.fa-backward {
+    color: #2e2e34;
+    font-size: 20px;
+    width: 56px;
+    height: 56px;
+    background: #fafafa;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+main .container-video .sub-container .icons-control .fa-solid.fa-play {
+    color: #2e2e34;
+    font-size: 28px;
+    width: 70px;
+    height: 70px;
+    background: #fafafa;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+main .container-video .sub-container .icons-control .fa-solid.fa-pause {
+    color: #2e2e34;
+    font-size: 28px;
+    width: 70px;
+    height: 70px;
+    background: #fafafa;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+main .container-video .sub-container .icons-control .fa-solid.fa-forward {
+    color: #2e2e34;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    background: #fafafa;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9e0e1;
+}
